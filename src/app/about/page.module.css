@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.aboutContent {
+  
+  padding: 0px;
+  width: 100%;
+}
+
+.profileImgWrapper {
+  
+  display: inline-block;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+  animation: glow 2s infinite alternate;
+  transition: transform 1s;
+}
+
+.profileImgWrapper:hover {
+  transform: rotateY(180deg);
+}
+
+.profileImg {
+  box-shadow: 10px 10px 20px rgba(50, 255, 225, 0.2);
+  width: 250px;
+  border-radius: 50%;
+  border: 2px solid black;
+  transition: transform 0.3s ease;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 20px;
+  font-family: fantasy;
+  margin: 5px;
+}
+
+.card {
+  background: #fdfdfd;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) rotateX(5deg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hireCard {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  text-align: center;
+}
+
+.btnGradient {
+  padding: 10px 20px;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.btnGradient:hover {
+  background: white;
+  color: #2575fc;
+  transform: scale(1.05);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+  }
+}
+
+.mySkillsSection {
+  background: linear-gradient(to right, #f7f8fa, #e3eaf1);
+  border: none;
+  perspective: 1000px;
+}
+
+.skillCard3d {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  margin: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.skillCard3d:hover {
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
+              inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.skillIcon3d {
+  font-size: 3rem;
+  color: #0066ff;
+  margin-bottom: 15px;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s;
+}
+
+.skillCard3d:hover .skillIcon3d {
+  color: #8a2be2;
+}
+
+.iconFont{
+  font-size:1.6rem
+}
