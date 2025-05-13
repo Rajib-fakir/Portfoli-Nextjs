@@ -1,5 +1,5 @@
 "use client";
-
+import Link from 'next/link';
 import React from "react";
 import styles from "../../public/styles/home.module.css";
 
@@ -24,13 +24,15 @@ const Canvas = () => {
                 <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>,{" "}
                 <span>React</span>, <span>Node.js</span>, <span>MongoDB</span>
               </div>
-              <a
-                href="#projects"
-                className="btn btn-warning btn-lg mt-4 d-none d-md-block"
+
+              <a href="/about"
+                
+                className="btn btn-light btn-lg px-4 shadow-sm rounded-pill text-primary d-none d-md-block mt-5"
                 data-aos="fade-up"
               >
-                View My Work <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
+                About Me <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
               </a>
+
             </div>
 
             {/* Image Section */}
@@ -45,11 +47,11 @@ const Canvas = () => {
               </div>
               
                        <a
-                href="#projects"
-                className="btn btn-warning btn-lg mt-5 p-2 d-md-none"
+                href="/about"
+                className="btn btn-light btn-lg px-4 shadow-sm rounded-pill d-md-none mt-5 text-success"
                 data-aos="fade-up"
               >
-                View My Work <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
+                About Me <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
               </a>     
               
             </div>

@@ -51,11 +51,11 @@ useEffect(() => {
        </div>   
           
           
-            <Link href="/" ><span className="link" onClick={toggleMenu}>Home</span></Link>
-            <Link href="/about" ><span className="link" onClick={toggleMenu}>About</span></Link>
-            <Link href="/services" ><span className="link" onClick={toggleMenu}>Services</span></Link>
-            <Link href="/contact" ><span className="link" onClick={toggleMenu}>Contact</span></Link>
-            <Link href="/ai" ><span className="link" onClick={toggleMenu}>AI Chat</span></Link>
+            <Link className="Link" href="/" ><span className="link" onClick={toggleMenu}>Home</span></Link>
+            <Link className="Link" href="/about" ><span className="link" onClick={toggleMenu}>About</span></Link>
+            <Link className="Link" href="/services" ><span className="link" onClick={toggleMenu}>Services</span></Link>
+            <Link className="Link" href="/contact" ><span className="link" onClick={toggleMenu}>Contact</span></Link>
+            <Link className="Link" href="/ai" ><span className="link" onClick={toggleMenu}>AI Chat</span></Link>
           </div>
         </div>
       </nav>

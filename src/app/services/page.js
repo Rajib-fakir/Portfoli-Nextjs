@@ -42,7 +42,7 @@ const services = [
 
 const Services = () => {
   useEffect(() => {
-    AOS.init({ duration: 800 });
+    AOS.init({ duration: 500 });
   }, []);
 
   return (
@@ -72,14 +72,16 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="bg-primary text-white text-center py-5">
-          <div className="container">
-            <h2 className="fw-bold display-6">Let’s Work Together</h2>
+                <section className="bg-primary text-white text-center py-5">
+          <div className="container text-center ">
+            <h2 className="fw-bold text-center w-100">Let’s Work Together</h2>
+            <hr  className="text-light"/>
             <p className="fs-5 mb-4">
               Transform your ideas into digital reality. Let’s discuss your project today.
             </p>
-            <a href="/contact" className="btn btn-light btn-lg px-4 shadow-sm rounded-pill">
-              Contact Us
+            <a href="/contact" className="btn btn-light btn-lg px-4 shadow-sm rounded-pill m-auto">
+              Contact
+               <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
             </a>
           </div>
         </section>
