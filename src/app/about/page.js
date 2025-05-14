@@ -1,8 +1,8 @@
 'use client';
 import styles from './page.module.css';
 import Skills from "../../components/Skills.js"
-
-
+import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function AboutPage() {
@@ -14,10 +14,12 @@ export default function AboutPage() {
     <div className={styles.aboutContent}>
       <div className="content text-center w-100  pt-5 m-0  ">
         <div className={styles.profileImgWrapper}>
-          <img
+          <Image
             src="/images/favicon.ico"
             alt="Profile"
             className={styles.profileImg}
+            width={250}
+            height={250}
           />
         </div>
 
@@ -82,10 +84,10 @@ export default function AboutPage() {
             <p className="fs-5 mb-4">
               Transform your ideas into digital reality. Let’s discuss your project today.
             </p>
-            <a href="/services" className="btn btn-light btn-lg px-4 shadow-sm rounded-pill m-auto">
+            <Link href="/services" className="btn btn-light btn-lg px-4 shadow-sm rounded-pill m-auto">
               Services
                <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
-            </a>
+            </Link>
           </div>
         </section>
         

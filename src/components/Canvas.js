@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import React from "react";
+import Image from 'next/image';
 import styles from "../../public/styles/home.module.css";
 
 
@@ -25,34 +26,36 @@ const Canvas = () => {
                 <span>React</span>, <span>Node.js</span>, <span>MongoDB</span>
               </div>
 
-              <a href="/about"
+              <Link href="/about"
                 
                 className="btn btn-light btn-lg px-4 shadow-sm rounded-pill text-primary d-none d-md-block mt-5"
                 data-aos="fade-up"
               >
                 About Me <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
-              </a>
+              </Link>
 
             </div>
 
             {/* Image Section */}
             <div className="col-lg-6 text-center mt-4 mt-lg-0 text-md-end ">
               <div className={styles.shadowGlow}>
-                <img
+                <Image
                   src="/images/favicon.ico"
                   alt="Developer"
                   className={styles.profileImage}
                   data-aos="fade-zoom-in"
+                  width={250}
+                  height={250}
                 />
               </div>
               
-                       <a
+                       <Link
                 href="/about"
                 className="btn btn-light btn-lg px-4 shadow-sm rounded-pill d-md-none mt-5 text-success"
                 data-aos="fade-up"
               >
                 About Me <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
-              </a>     
+              </Link>     
               
             </div>
           </div>

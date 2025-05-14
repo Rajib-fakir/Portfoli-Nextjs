@@ -3,7 +3,7 @@
 import { useRef, useState, lazy } from "react";
 import styles from "./contact.module.css";
 import dynamic from "next/dynamic";
-
+import Image from 'next/image';
 
 const Contact = () => {
   const form = useRef();
@@ -44,7 +44,10 @@ const Contact = () => {
       
                 {/* Profile Card */}
           <div className={styles.profileCard}>
-            <img src="/images/favicon.ico" alt="Rajib Fakir" className={styles.profileImage} />
+            <Image src="/images/favicon.ico" alt="Rajib Fakir" className={styles.profileImage} width
+            width={120}
+            height={120}
+            />
             <h3>Rajib Fakir</h3>
             <p>Full Stack Web Developer</p>
             <p>Dhaka, Bangladesh</p>

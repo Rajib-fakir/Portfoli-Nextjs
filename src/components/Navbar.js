@@ -1,5 +1,6 @@
 // components/Navbar.js
 "use client"
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState,useEffect } from 'react';
 
@@ -33,11 +34,12 @@ useEffect(() => {
       <nav className="navbar p-0 m-0 ">
         <div className="container p-1 m-0 w-100">
           <Link href="/" >
-                 <img
+                 <Image
                   src="/images/favicon.ico"
                   alt="logo"
                   className="logo"
-                  
+                  width={30}
+                  height={30}
                 />
           
           </Link>

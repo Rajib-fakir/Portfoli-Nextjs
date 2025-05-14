@@ -6,6 +6,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./services.module.css";
+import Link from 'next/link';
+
+
+
 
 const services = [
   {
@@ -79,10 +83,10 @@ const Services = () => {
             <p className="fs-5 mb-4">
               Transform your ideas into digital reality. Let’s discuss your project today.
             </p>
-            <a href="/contact" className="btn btn-light btn-lg px-4 shadow-sm rounded-pill m-auto">
+            <Link href="/contact" className="btn btn-light btn-lg px-4 shadow-sm rounded-pill m-auto">
               Contact
                <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
-            </a>
+            </Link>
           </div>
         </section>
       </main>

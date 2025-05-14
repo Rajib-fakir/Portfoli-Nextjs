@@ -1,3 +1,7 @@
+import Link from 'next/link';
+
+
+
 export default function NotFound() {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light text-center px-3">
@@ -29,9 +33,9 @@ export default function NotFound() {
       </p>
 
       {/* Button */}
-      <a href="/" className="btn btn-primary px-4 py-2">
+      <Link href="/" className="btn btn-primary px-4 py-2">
         Go back home
-      </a>
+      </Link>
     </div>
   );
 }
