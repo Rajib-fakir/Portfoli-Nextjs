@@ -4,6 +4,9 @@ import { useRef, useState, lazy } from "react";
 import styles from "./contact.module.css";
 import dynamic from "next/dynamic";
 import Image from 'next/image';
+import Link from 'next/link';
+
+
 
 const Contact = () => {
   const form = useRef();
@@ -44,7 +47,7 @@ const Contact = () => {
       
                 {/* Profile Card */}
           <div className={styles.profileCard}>
-            <Image src="/images/favicon.ico" alt="Rajib Fakir" className={styles.profileImage} width
+            <Image src="/images/favicon.ico" alt="Rajib Fakir" className={styles.profileImage}
             width={120}
             height={120}
             />
@@ -56,13 +59,13 @@ const Contact = () => {
             
             
             <div className={styles.socialLinks}>
-              <a href="https://www.facebook.com/profile.php?id=100092192364083">                    <i className="bi bi-facebook"></i>
-              </a>
-              <a href="https://wa.me/8801600299821">
+              <Link href="https://www.facebook.com/profile.php?id=100092192364083">                    <i className="bi bi-facebook"></i>
+              </Link>
+              <Link href="https://wa.me/8801600299821">
                                   <i className="bi bi-whatsapp"></i>
-              </a>
-              <a href="mailto:rajib01943075658@gmail.com">                    <i className="bi bi-envelope-fill"></i>
-              </a>
+              </Link>
+              <Link href="mailto:rajib01943075658@gmail.com">                    <i className="bi bi-envelope-fill"></i>
+              </Link>
             </div>
           </div>
         </div>
