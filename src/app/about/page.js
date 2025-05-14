@@ -4,15 +4,10 @@ import Skills from "../../components/Skills.js"
 import Image from 'next/image';
 import Link from 'next/link';
 
-
 export default function AboutPage() {
-  
-  
-  
-  
   return (
     <div className={styles.aboutContent}>
-      <div className="content text-center w-100  pt-5 m-0  ">
+      <div className="content text-center w-100 pt-5 m-0">
         <div className={styles.profileImgWrapper}>
           <Image
             src="/images/favicon.ico"
@@ -26,7 +21,7 @@ export default function AboutPage() {
         <div className={styles.textBox}>
           <div className={`${styles.card} mt-5`}>
             <h2 className="mb-3 font-25">About Me</h2>
-           <hr />
+            <hr />
             <p>
               I'm a full-stack developer passionate about modern web technologies. I create responsive and user-friendly web apps.
             </p>
@@ -37,8 +32,8 @@ export default function AboutPage() {
             <button className={`${styles.btnGradient} btn btn-outline-light`}>Hire Me</button>
           </div>
         </div>
-<hr />
-        <section className={`card ${styles.mySkillsSection} m-2 p-2 rounded shadow-lg strip mt-5 `}>
+        <hr />
+        <section className={`card ${styles.mySkillsSection} m-2 p-2 rounded shadow-lg strip mt-5`}>
           <div className="card-body">
             <h4 className="card-header text-center mb-3 text-primary">
               <i className="bi bi-diagram-3-fill h1 text-success font-50"></i> My Skills
@@ -73,29 +68,23 @@ export default function AboutPage() {
           </div>
         </section>
         <section className="mt-5 m-0 p-0 ">
-        <Skills />
+          <Skills />
         </section>
-        
-        
-                <section className="bg-primary text-white text-center py-5">
-          <div className="container text-center ">
 
-            
+        <section className="bg-primary text-white text-center py-5">
+          <div className="container text-center">
             <h2 className="fw-bold text-center w-100">Let&rsquo;s Work Together</h2>
-            
-            
-            
-            <hr  className="text-light"/>
-<p className="fs-5 mb-4">
-  Transform your ideas into digital reality. Let&rsquo;s discuss your project today.
-</p>
+            <hr className="text-light" />
+            <p className="fs-5 mb-4">
+              Transform your ideas into digital reality. Let&rsquo;s discuss your project today.
+            </p>
             <Link href="/services" className="btn btn-light btn-lg px-4 shadow-sm rounded-pill m-auto">
               Services
-               <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
+              <i className="bi bi-arrow-right-circle h5 ms-2 text-info"></i>
             </Link>
           </div>
         </section>
-        
+
       </div>
     </div>
   );
