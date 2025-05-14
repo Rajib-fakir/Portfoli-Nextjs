@@ -22,9 +22,9 @@ export default function AboutPage() {
           <div className={`${styles.card} mt-5`}>
             <h2 className="mb-3 font-25">About Me</h2>
             <hr />
-            <p>
-              I'm a full-stack developer passionate about modern web technologies. I create responsive and user-friendly web apps.
-            </p>
+<p>
+  I&rsquo;m a full-stack developer passionate about modern web technologies. I create responsive and user-friendly web apps.
+</p>
           </div>
 
           <div className={`${styles.card} ${styles.hireCard} mt-5`}>
