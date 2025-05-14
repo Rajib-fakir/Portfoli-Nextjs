@@ -75,8 +75,8 @@ const Contact = () => {
       
       
         <div className={styles.header}>
-          <h2>Let's Get in Touch</h2>
-          <p>I'm open to freelance work, collaboration, or just a tech talk!</p>
+<h2>Let&rsquo;s Get in Touch</h2>
+<p>I&rsquo;m open to freelance work, collaboration, or just a tech talk!</p>
         </div>
 
         <div className={`${styles.grid} p-2`}>
@@ -111,7 +111,7 @@ const Contact = () => {
           <div className={styles.modalBackdrop} onClick={() => setShowModal(false)}>
             <div className={styles.modal}>
               <h5>Message Sent!</h5>
-              <p>Thank you for contacting me. I’ll get back to you soon!</p>
+<p>Thank you for contacting me. I&rsquo;ll get back to you soon!</p>
               <button onClick={() => setShowModal(false)}>Close</button>
             </div>
           </div>

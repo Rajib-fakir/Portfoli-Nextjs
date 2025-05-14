@@ -24,9 +24,9 @@ export default function Error({ error, reset }) {
       {/* Error message (optional for dev only) */}
       {/* <p className="text-muted">{error?.message}</p> */}
 
-      <p className="mt-3 text-secondary">
-        We're sorry, but an unexpected error has occurred.
-      </p>
+<p className="mt-3 text-secondary">
+  We&rsquo;re sorry, but an unexpected error has occurred.
+</p>
 
       {/* Retry button */}
       <button

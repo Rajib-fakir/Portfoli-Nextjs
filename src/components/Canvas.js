@@ -14,9 +14,16 @@ const Canvas = () => {
           <div className="row align-items-center">
             {/* Text Section */}
             <div className="col-lg-6 text-center text-lg-start">
-              <h1 className="display-4 fw-bold" data-aos="zoom-out">
-                Hi, I'm a Web Developer
-              </h1>
+
+              
+        <h1 className="display-4 fw-bold" data-aos="zoom-out">
+  Hi, I&rsquo;m a Web Developer
+</h1>      
+              
+              
+              
+              
+              
               <p className="lead" data-aos="fade-left">
                 I build high-performance, secure, and scalable web applications.
               </p>
