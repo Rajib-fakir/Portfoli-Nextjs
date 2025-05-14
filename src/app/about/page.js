@@ -6,6 +6,10 @@ import Skills from "../../components/Skills.js"
 
 
 export default function AboutPage() {
+  
+  
+  
+  
   return (
     <div className={styles.aboutContent}>
       <div className="content text-center w-100  pt-5 m-0  ">
