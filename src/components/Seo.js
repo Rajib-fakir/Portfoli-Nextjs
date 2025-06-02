@@ -2,8 +2,9 @@ export function generateMetadata({
   title,
   description,
   path = "",
-  verification: {
-    google: 'gJdyRwtpdgK6Z0cJciF_J7TWitSxbCGe66T4XNwBaxk'},
+  verification = {
+    google: 'gJdyRwtpdgK6Z0cJciF_J7TWitSxbCGe66T4XNwBaxk',
+  },
   image = "/images/favicon.ico",
   icon = "/images/favicon.ico",
   keywords = [],
@@ -12,7 +13,7 @@ export function generateMetadata({
   email = "mailto:rajib01943075658@gmail.com",
   jobTitle = "Web Developer",
 }) {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://rajib-fakir.netlify.app";
   const fullUrl = `${baseUrl}${path}`;
   const imageUrl = `${baseUrl}${image}`;
 
@@ -28,15 +29,15 @@ export function generateMetadata({
       "@type": "Organization",
       name: "RajibDev",
     },
-    description,
     email,
+    ...(description && { description }), // শুধুমাত্র থাকলে description অ্যাড হবে
   };
 
   return {
     title,
     description,
     keywords,
-    authors: [{ name: author }],
+    authors: [{ name: author, url: fullUrl, email }],
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: fullUrl,
@@ -66,7 +67,6 @@ export function generateMetadata({
     other: {
       "application/ld+json": JSON.stringify(jsonLd),
     },
+    verification, // এখন এটা external object হিসাবে আছে
   };
 }
-
-
