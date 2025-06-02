@@ -2,7 +2,10 @@ export function generateMetadata({
   title,
   description,
   path = "",
+  verification: {
+    google: 'gJdyRwtpdgK6Z0cJciF_J7TWitSxbCGe66T4XNwBaxk'},
   image = "/images/favicon.ico",
+  icon = "/images/favicon.ico",
   keywords = [],
   author = "Rajib",
   sameAs = ["https://www.facebook.com/profile.php?id=100092192364083"],
@@ -65,3 +68,5 @@ export function generateMetadata({
     },
   };
 }
+
+
