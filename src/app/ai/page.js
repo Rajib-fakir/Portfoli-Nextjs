@@ -7,7 +7,7 @@ import styles from './ai.module.css';
 
 const AiChat = () => {
   return(<>
-  <div className="h2 text-light"> Development runing....!</div>
+  <div className="h2 text-light"> Development runing....!🧐</div>
   
   </>)
 };
