@@ -17,7 +17,7 @@ const Canvas = () => {
 
               
         <h1 className="display-4 fw-bold" data-aos="zoom-out">
-  Hi, I&rsquo;m a Web Developer
+  Hi, I&rsquo;m a Web Developer.
 </h1>      
               
               
