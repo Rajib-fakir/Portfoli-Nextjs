@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "my",
   "version": "0.1.0",
   "private": true,
@@ -21,5 +22,31 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.7"
+=======
+  "name": "Portfolio RajibDev",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@netlify/next": "^1.4.9",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.6",
+    "bootstrap-icons": "^1.13.1",
+    "next": "15.3.2",
+    "next-sitemap": "^4.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2"
+>>>>>>> 39d2f2b2eedbee2e765960b8b3a50635ddf2e2ad
   }
 }
