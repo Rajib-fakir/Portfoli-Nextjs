@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://rajib-hasan.netlify.app
+
+# Sitemaps
+Sitemap: https://rajib-hasan.netlify.app/sitemap.xml
