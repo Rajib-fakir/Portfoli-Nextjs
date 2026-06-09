@@ -1,0 +1,93 @@
+.section {
+  padding: 100px 8%;
+  background-color: var(--bg-primary); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  color: var(--text-main);              /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* TITLE */
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-title);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--text-muted);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+/* TIMELINE */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+/* CARD */
+.card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--bg-card);         /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  border: 1px solid var(--border-card); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  backdrop-filter: blur(10px);
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(99, 102, 241, 0.4);
+  /* গ্লোবাল গ্লো-কালার এবং ১ পিক্সেল বর্ডারের ডাইনামিক কম্বিনেশন */
+  box-shadow: 0 20px 40px var(--glow-color), 
+              0 0 0 1px rgba(99, 102, 241, 0.2);
+}
+
+/* YEAR BADGE */
+.year {
+  min-width: 90px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;                         /* ব্যাজের ভেতরের টেক্সট সবসময় সাদা থাকবে */
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+/* TEXT */
+.card h3 {
+  margin: 0;
+  color: var(--text-title);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.card p {
+  margin-top: 6px;
+  color: var(--text-muted);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .year {
+    width: fit-content;
+    min-width: auto;
+  }
+}

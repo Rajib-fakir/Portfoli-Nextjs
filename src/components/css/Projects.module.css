@@ -1,0 +1,186 @@
+.section {
+  padding: 100px 8%;
+  background-color: var(--bg-primary); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  color: var(--text-main);              /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* TITLE */
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-title);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+/* FILTER */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.filters button {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #6366f1;
+  background: transparent;
+  color: var(--text-main);              /* থিম অনুযায়ী লেখার কালার চেঞ্জ হবে */
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filters button:hover {
+  background: #6366f1;
+  color: white;                         /* হোভার করলে লেখা সবসময় সাদা দেখাবে */
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: var(--bg-card);         /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  border: 1px solid var(--border-card); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card h3 {
+  color: var(--text-title);             /* কার্ডের টাইটেল কালার */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--text-muted);             /* কার্ডের ডেসক্রিপশন কালার */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 20px 40px var(--glow-color); /* গ্লোবাল ডাইনামিক শ্যাডো */
+}
+
+/* IMAGE */
+.img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* TECH TAGS */
+.tech {
+  font-size: 12px;
+  color: var(--text-muted);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  display: block;
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+/* BUTTON ROW */
+.btnRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.liveBtn,
+.gitBtn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;                         /* লিঙ্কের ভেতরের টেক্সট সবসময় সাদা থাকবে */
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* লাইভ বাটনের গ্রাডিয়েন্ট ডার্ক ও লাইট দুই মোডেই পপ করবে */
+.liveBtn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.liveBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+.gitBtn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.gitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* DETAILS BUTTON */
+.detailsBtn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  background: var(--bg-card);         /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  color: var(--text-main);            /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.detailsBtn:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #6366f1;
+}
+
+/* MODAL OVERLAY */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);      /* একটু সফট ডার্ক ওভারলে */
+  backdrop-filter: blur(8px);          /* আধুনিক ব্লার ইফেক্ট */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* MODAL BOX */
+.modal {
+  background: var(--bg-primary);       /* ডার্ক মোডে কালো, লাইট মোডে সাদা হবে */
+  border: 1px solid var(--border-card);
+  padding: 30px;
+  border-radius: 20px;
+  width: 340px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  color: var(--text-main);
+  animation: modalScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal h2, .modal h3 {
+  color: var(--text-title);
+  margin-bottom: 10px;
+}
+
+/* মোডাল ওপেন হওয়ার স্মুথ অ্যানিমেশন */
+@keyframes modalScale {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

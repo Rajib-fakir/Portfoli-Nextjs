@@ -1,0 +1,133 @@
+/* পুরো সেকশনের জন্য আধুনিক ফন্ট এবং ব্যাকগ্রাউন্ড */
+.section {
+  position: relative;
+  padding: 120px 8%;
+  background-color: var(--bg-primary); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  color: var(--text-main);              /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  text-align: center;
+  overflow: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  /* আধুনিক ও প্রিমিয়াম ফন্ট ফ্যামিলি */
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ব্যাকগ্রাউন্ডের হালকা রঙিন গ্লো */
+.bgGlow {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* টাইটেলে গ্রাডিয়েন্ট ইফেক্ট */
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em; /* ফন্টকে আরও প্রফেশনাল দেখানোর জন্য */
+  margin-bottom: 12px;
+  /* ডার্ক/লাইট থিম অনুযায়ী টেক্সটের মেইন কালার থেকে গ্রাডিয়েন্ট তৈরি হবে */
+  background: linear-gradient(135deg, var(--text-title) 0%, #818cf8 100%); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  color: var(--text-muted); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+/* CARD - টেক্সট এবং কনটেন্ট সেন্টারে রাখার জন্য */
+.card {
+  background: var(--bg-card);         /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  border: 1px solid var(--border-card); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  position: relative;
+  
+  /* কার্ডের ভেতরের সব উপাদান সেন্টারে নেওয়ার জন্য ফ্লেক্সবক্স */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* হরাইজন্টাল সেন্টার */
+  text-align: center;  /* টেক্সট সেন্টার */
+}
+
+/* আইকন বক্স - যা পুরোপুরি সেন্টারে থাকবে */
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;     /* আইকনকে ভার্টিকালি সেন্টার করবে */
+  justify-content: center;   /* আইকনকে হরাইজন্টালি সেন্টার করবে */
+  margin-bottom: 25px;
+  transition: 0.3s ease;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.icon {
+  color: #6366f1; /* ডার্ক ও লাইট দুই মোডেই পারফেক্ট ভিজিবিলিটি */
+  width: 26px;
+  height: 26px;
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  color: var(--text-title); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: 0.3s ease;
+}
+
+.card p {
+  color: var(--text-muted); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* হোভার ইফেক্ট */
+.card:hover {
+  transform: translateY(-10px);
+  background: var(--bg-card);
+  border-color: rgba(99, 102, 241, 0.4);
+  /* গ্লোবাল গ্লো-কালার এবং ১ পিক্সেল বর্ডারের ডাইনামিক কম্বিনেশন */
+  box-shadow: 0 20px 40px var(--glow-color), 
+              0 0 0 1px rgba(99, 102, 241, 0.2);
+}
+
+.card:hover .iconWrapper {
+  background: #6366f1;
+  border-color: #6366f1;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.card:hover .icon {
+  color: #ffffff;
+}
+
+.card:hover h3 {
+  /* হোভার করলে লাইট মোডে ডার্ক ইন্ডিগো এবং ডার্ক মোডে লাইট ইন্ডিগো থিম সেট হবে */
+  color: var(--hero-title-start); 
+}

@@ -1,0 +1,240 @@
+/* =========================
+   SECTION
+========================= */
+.section {
+  padding: 100px 8%;
+  background-color: var(--bg-primary); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  color: var(--text-main);              /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* TITLE */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: var(--text-title);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  letter-spacing: -0.02em;
+}
+
+/* SUBTITLE */
+.subtitle {
+  color: var(--text-muted);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+/* =========================
+   FORM (GLASS EFFECT)
+========================= */
+.form {
+  max-width: 520px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  border-radius: 16px;
+
+  /* ডার্ক/লাইট মোড অনুযায়ী গ্লাস ইফেক্ট ব্যাকগ্রাউন্ড ও বর্ডার */
+  background: var(--bg-card);         
+  border: 1px solid var(--border-card); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  /* গ্লোবাল গ্লো-কালার দিয়ে তৈরি সফট শ্যাডো */
+  box-shadow: 0 10px 30px var(--glow-color); 
+  transition: all 0.4s ease;
+}
+
+/* =========================
+   INPUT & TEXTAREA
+========================= */
+.input,
+.textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card); /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  background: var(--bg-card);         /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  color: var(--text-main);            /* ইনপুট টেক্সট কালার অটো-শিফট হবে */
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* TEXTAREA SPECIFIC */
+.textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+/* PLACEHOLDER COLOR */
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* FOCUS EFFECT */
+.input:focus,
+.textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+  background: var(--bg-primary); /* ফোকাস করলে ব্যাকগ্রাউন্ড একটু সলিড লুক দেবে */
+}
+
+/* =========================
+   BUTTON
+========================= */
+.button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white; /* বাটনের টেক্সট সবসময় সাদা থাকবে */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   ERROR & VALIDATION STATES
+========================= */
+.error {
+  color: #ff4d4f;
+  font-size: 12px;
+  text-align: left;
+  margin-top: -8px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* INPUT ERROR STATE */
+.inputError,
+.textareaError {
+  border-color: #ff4d4f !important;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.25) !important;
+}
+
+/* INPUT SUCCESS STATE */
+.inputSuccess {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.25) !important;
+}
+
+/* =========================
+   LOADER SPINNER
+========================= */
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   MODAL (SUCCESS POPUP)
+========================= */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px); /* মডার্ন ব্লার ওভারলে */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: var(--bg-primary);       /* ডার্ক মোডে ডার্ক, লাইট মোডে লাইট ব্যাকগ্রাউন্ড */
+  color: var(--text-main);             /* গ্লোবাল ভ্যারিয়েবল অ্যাপ্লাইড */
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 340px;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  animation: pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* স্মুথ বাউন্সি অ্যানিমেশন */
+}
+
+.modal h2, .modal h3 {
+  color: var(--text-title);
+  margin-bottom: 8px;
+}
+
+.modal p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .section {
+    padding: 70px 5%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .form {
+    padding: 18px;
+  }
+}
